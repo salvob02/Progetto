@@ -1,2 +1,2 @@
-FROM ubuntu:latest
-CMD [ "bash" ]
+FROM python:latest
+CMD [ "hello world" ]
