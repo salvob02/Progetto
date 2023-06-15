@@ -1,2 +1,2 @@
-FROM python:latest
-CMD [ "hello world" ]
+FROM ubuntu:latest
+ENTRYPOINT [ "prova.py" ]
