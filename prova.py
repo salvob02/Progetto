@@ -1,11 +1,16 @@
-from flask import Flask
+from flask import Flask, request, Response
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/', defaults={'path': ''}, methods=['GET', 'POST'])
+@app.route('/<path:path>', methods=['GET', 'POST'])
+def catch_all(path):
+        if request.form:
+                print('Form:' + str(request.form))
+        if request.data:
+                print('Data:' + str(request.data))
 
-def root():
-    return 'Hello World!'
+        return ''
     
             
 if __name__ == "__main__":
