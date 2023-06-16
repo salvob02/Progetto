@@ -5,8 +5,18 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
- 
-print("Hello World (Python)!\n") 
+i=0
+def root():
+    
+    while (i<5):
+              i=i+1
+              <h1>i</h1>
+               
+    
+    return "fine (Python)! \n"
+    
+
+
     
 
 if __name__ == "__main__":
