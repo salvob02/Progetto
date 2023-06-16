@@ -12,7 +12,7 @@ def index():
 def ciclo():
     for parola in lista:
         if parola=="uno":
-        index()
+            index()
 
 
 
