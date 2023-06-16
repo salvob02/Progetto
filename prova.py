@@ -10,7 +10,8 @@ def root():
     i=0
     while (i<5):
               i=i+1
-              return i
+    
+    return "il valore di i e: ",i
             
                
     
