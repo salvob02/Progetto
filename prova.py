@@ -1,18 +1,24 @@
 
-from flask import Flask
-
+from flask import Flask, render_template
+  
+# declaring app name
 app = Flask(__name__)
-
-lista=["uno","uno","uno","due"]
+  
+# making list of pokemons
+Pokemons =["Pikachu", "Charizard", "Squirtle", "Jigglypuff", 
+           "Bulbasaur", "Gengar", "Charmander", "Mew", "Lugia", "Gyarados"]
+  
+# defining home page
 @app.route('/')
-
-
-def ciclo():
-    for parola in lista:
-        return parola
-
+def homepage():
+  
+# returning index.html and list
+# and length of list to html page
+    return render_template("index.html", len = len(Pokemons), Pokemons = Pokemons)
+  
+   
 
 
             
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=8081)
+    app.run(use_reloader = True ,debug=True, host="0.0.0.0", port=8081)
