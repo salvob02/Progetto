@@ -6,7 +6,13 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return '<h1>Hello, World!</h1>'
+    
+    return 'Hello, World!'
+
+def ciclo():
+    i=0
+    if i==0:
+        index()
 
 
 
