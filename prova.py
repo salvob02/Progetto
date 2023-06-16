@@ -5,9 +5,8 @@ from flask import Flask
 app = Flask(__name__)
 
 @app.route('/')
-def root():
-    print("ciao") 
-    return "Hello World (Python)! (up %s)\n" 
+ 
+    return "Hello World (Python)!\n" 
     
 
 if __name__ == "__main__":
