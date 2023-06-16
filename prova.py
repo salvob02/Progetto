@@ -2,16 +2,14 @@
 
 
 from flask import Flask
+from sys import stderr
 app = Flask(__name__)
 
 @app.route('/')
 
 def root():
-    i=0
-    while (i<5):
-              i=i+1
+    print('Hello world!', file=sys.stderr)
     
-    return "il valore di i e: ",i
             
                
     
