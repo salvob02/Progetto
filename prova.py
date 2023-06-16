@@ -3,15 +3,15 @@ from flask import Flask
 
 app = Flask(__name__)
 
-
+lista=["uno","uno","uno","due"]
 @app.route('/')
 def index():
     
     return 'Hello, World!'
 
 def ciclo():
-    i=0
-    if i==0:
+    for parola in lista:
+        if parola=="uno":
         index()
 
 
