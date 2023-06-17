@@ -1,19 +1,18 @@
 
 from flask import Flask, render_template
   
-# declaring app name
 app = Flask(__name__)
   
-# making list of languages
+# lista 
 Linguaggi =["Python", "Javascript", "Java", "C", 
            "C#", "C++", "Php", "Swift", "R"]
   
-# defining home page
-@app.route('/')
+# definizione funzione home page
+@app.route('/')  #path sul quale eseguire
 def homepage():
   
-# returning index.html and list
-# and length of list to html page
+# ritorna index.html e lista
+# nei parametri passaggio di len e lista al file html
     return render_template("index.html", len = len(Linguaggi), Linguaggi = Linguaggi)
   
    
@@ -21,4 +20,4 @@ def homepage():
 
             
 if __name__ == "__main__":
-    app.run(use_reloader = True ,debug=True, host="0.0.0.0", port=8081)
+    app.run(use_reloader = True ,debug=True, host="0.0.0.0", port=8081)   #generare il file http in locale alla porta 8081
